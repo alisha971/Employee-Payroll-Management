@@ -1,0 +1,27 @@
+### Get All Position Data
+GET  http://localhost:5000/position_data
+
+### Create Position Data
+POST  http://localhost:5000/position_data
+Content-Type: application/json
+
+{
+    "position_name" : "Operator Produksi",
+    "basic_salary" : 2000,
+    "transport_allowance" : 1000,
+    "meal_allowance" : 500
+}
+
+### UPDATE Position Data
+PATCH   http://localhost:5000/position_data/1
+Content-Type: application/json
+
+{
+    "position_name" : "Kepala Bagian",
+    "basic_salary" : 5000,
+    "transport_allowance" : 2000,
+    "meal_allowance" : 1000
+}
+
+### DELETE Position Data
+DELETE    http://localhost:5000/position_data/2

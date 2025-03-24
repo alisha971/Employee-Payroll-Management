@@ -1,0 +1,17 @@
+export const GET_employee_data_SUCCESS = 'GET_employee_data_SUCCESS';
+export const GET_employee_data_FAILURE = 'GET_employee_data_FAILURE';
+export const employee_IMAGE_SUCCESS = 'employee_IMAGE_SUCCESS';
+export const employee_IMAGE_FAILURE = 'employee_IMAGE_FAILURE';
+export const GET_employee_data_BY_ID_SUCCESS = 'GET_employee_data_BY_ID_SUCCESS';
+export const GET_employee_data_BY_ID_FAILURE = 'GET_employee_data_BY_ID_FAILURE';
+export const GET_employee_data_BY_NIK_SUCCESS = 'GET_employee_data_BY_NIK_SUCCESS';
+export const GET_employee_data_BY_NIK_FAILURE = 'GET_employee_data_BY_NIK_FAILURE';
+export const GET_employee_data_BY_NAME_SUCCESS = 'GET_employee_data_BY_NAME_SUCCESS';
+export const GET_employee_data_BY_NAME_FAILURE = 'GET_employee_data_BY_NAME_FAILURE';
+export const CREATE_employee_data_REQUEST = 'CREATE_employee_data_REQUEST';
+export const CREATE_employee_data_SUCCESS = 'CREATE_employee_data_SUCCESS';
+export const CREATE_employee_data_FAILURE = 'CREATE_employee_data_FAILURE';
+export const UPDATE_employee_data_SUCCESS = 'UPDATE_employee_data_SUCCESS';
+export const UPDATE_employee_data_FAILURE = 'UPDATE_employee_data_FAILURE';
+export const DELETE_employee_data_SUCCESS = 'DELETE_employee_data_SUCCESS';
+export const DELETE_employee_data_FAILURE = 'DELETE_employee_data_FAILURE';

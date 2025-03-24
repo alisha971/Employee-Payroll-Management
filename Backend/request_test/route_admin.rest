@@ -1,0 +1,279 @@
+######################
+#### Route Admin #####
+######################
+
+### Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "aldi",
+    "password": "update"
+}
+
+### Get Me
+GET http://localhost:5000/me
+
+### Logout User
+DELETE   http://localhost:5000/logout
+
+
+
+### === Change Password === ###
+
+### Change Password employee (Self)
+PATCH  http://localhost:5000/change_password
+Content-Type: application/json
+
+{
+    "password" : "update",
+    "confPassword" : "update"
+}
+
+### Change Password Admin (All Employee Data)
+PATCH  http://localhost:5000/employee_data/2/change_password
+Content-Type: application/json
+
+{
+    "password":"budi",
+    "confPassword":"budi"
+}
+
+
+
+
+#############################
+####  Master Data Admin  ####
+#############################
+
+/////// Employee Data //////
+
+### get All Employee Data
+GET http://localhost:5000/employee_data
+
+
+### get Single Employee Data by ID
+GET http://localhost:5000/employee_data/id/2
+
+### get Single Employee Data by NIK
+GET http://localhost:5000/employee_data/nik/223344
+
+### get Single Employee Data by NAME
+GET http://localhost:5000/employee_data/name/budi
+
+### Create Employee Data
+POST http://localhost:5000/employee_data
+Content-Type: application/json
+
+{
+    "nik": 223344,
+    "emp_name": "Cecep",
+    "username": "cecep",
+    "password": "12345",
+    "confPassword": "12345",
+    "gender": "Male",
+    "position": "Operator Produksi",
+    "join_date": "11-02-2023",
+    "status": "Permanent Employee",
+    "photo": ,
+    "access_rights": "employee"
+}
+
+
+
+### Update Employee Data
+PATCH  http://localhost:5000/employee_data/2
+Content-Type: application/json
+
+{
+    "nik": 223344,
+    "emp_name": "Budi",
+    "username": "budi",
+    "gender": "Male",
+    "position": "Operator Produksi",
+    "join_date": "11-02-2023",
+    "status": "Permanent Employee",
+    "photo": ,
+    "access_rights": "employee"
+}
+
+### Change Password Admin (All Employee Data)
+PATCH  http://localhost:5000/employee_data/2/change_password
+Content-Type: application/json
+
+{
+    "password":"budi",
+    "confPassword":"budi"
+}
+
+### Change Password employee (Self)
+PATCH  http://localhost:5000/change_password
+Content-Type: application/json
+
+{
+    "password" : "update",
+    "confPassword" : "update"
+}
+
+### Delete Employee Data
+DELETE   http://localhost:5000/employee_data/
+
+
+/////// Position Data //////
+
+### Get All Position Data
+GET  http://localhost:5000/position_data
+
+### Create Position Data
+POST  http://localhost:5000/position_data
+Content-Type: application/json
+
+{
+    "position_name" : "Operator Produksi",
+    "basic_salary" : 2000,
+    "transport_allowance" : 1000,
+    "meal_allowance" : 500
+}
+
+### UPDATE Position Data
+PATCH   http://localhost:5000/position_data/1
+Content-Type: application/json
+
+{
+    "position_name" : "Kepala Bagian",
+    "basic_salary" : 5000,
+    "transport_allowance" : 2000,
+    "meal_allowance" : 1000
+}
+
+### DELETE Position Data
+DELETE    http://localhost:5000/position_data/2
+
+
+
+#############################
+###### Transaction Admin ######
+#############################
+
+/////// Attendance Data //////
+
+### Get All Attendance Data
+GET  http://localhost:5000/attendance_data
+
+### Create Attendance Data
+POST  http://localhost:5000/attendance_data
+Content-Type: application/json
+
+{
+    "nik": "223344",
+    "emp_name": "Budi",
+    "position_name": "Operator Produksi",
+    "gender": "Laki - Laki",
+    "present": "9",
+    "sick": "2",
+    "absent": "1"
+}
+
+### UPDATE Attendance Data
+PATCH  http://localhost:5000/attendance_data/update/11
+Content-Type: application/json
+
+{
+    "present": "2",
+    "sick": "2",
+    "absent": "2"
+}
+
+### DELETE Attendance Data
+DELETE http://localhost:5000/attendance_data/8
+
+
+/////// Deduction Data //////
+
+### Get All Deduction Salary Data
+GET  http://localhost:5000/deduction_data
+
+### Get Deduction Salary Data By ID
+GET  http://localhost:5000/deduction_data/23
+
+### Create Deduction Data
+POST  http://localhost:5000/deduction_data
+Content-Type: application/json
+
+{
+    "id" : 1 ,
+    "deduction": "absent",
+    "deduction_amt": 2000
+}
+
+### UPDATE Deduction Data
+PATCH  http://localhost:5000/deduction_data/update/3
+Content-Type: application/json
+
+{
+    "deduction" : "updated 1",
+    "deduction_amt" : 9999
+}
+
+### DELETE Deduction Data
+DELETE http://localhost:5000/deduction_data/3
+
+
+
+/////// Salary Data //////
+
+### get All Salary Data employee
+GET http://localhost:5000/employee_salary_data
+
+### get Salary Data employee By Name
+GET http://localhost:5000/salary_data/name/Aldi Ramdani
+
+### get All Salary Data employee By Month
+GET http://localhost:5000/employee_salary_data/month/June
+
+### get All Salary Data employee By Year
+GET http://localhost:5000/employee_salary_data/year/2023
+
+// NOTE: Data month & year (month & year) ditetapkan berdasarkan input Attendance Data employee.
+
+
+
+#############################
+####### report Admin #######
+#############################
+
+/////// Salary Report //////
+
+### get All Data Salary Report
+GET http://localhost:5000/report/salary
+
+### get All Data Salary Report By Name
+GET http://localhost:5000/report/salary/name/nana
+
+### get All Data Salary Report By Month
+GET http://localhost:5000/report/salary/month/July
+
+### get All Data Salary Report By Year
+GET http://localhost:5000/report/salary/year/2023
+
+
+
+/////// Attendance Report //////
+
+GET http://localhost:5000/report/attendance/month/March
+
+### get All Data Attendance Report By Year
+GET http://localhost:5000/report/attendance/year/2021
+
+
+
+/////// Salary Slip //////
+
+### get Salary Slip By Name
+GET http://localhost:5000/report/slip_Salary/name/caca
+
+### get Salary Slip By Month
+GET http://localhost:5000/report/slip_Salary/month/March
+
+### get Salary Slip By Year
+GET http://localhost:5000/report/slip_Salary/year/2022

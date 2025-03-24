@@ -1,0 +1,25 @@
+### Get All Attendance Data
+GET  http://localhost:5000/attendance_data
+
+### Create Attendance Data
+POST  http://localhost:5000/attendance_data
+Content-Type: application/json
+
+{
+    "present": 9,
+    "sick": 2,
+    "absent": 1
+}
+
+### UPDATE Attendance Data
+PATCH  http://localhost:5000/attendance_data/update/11
+Content-Type: application/json
+
+{
+    "present": "2",
+    "sick": "2",
+    "absent": "2"
+}
+
+### DELETE Attendance Data
+DELETE http://localhost:5000/attendance_data/10

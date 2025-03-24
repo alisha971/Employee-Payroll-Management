@@ -1,0 +1,14 @@
+######################
+#### Salary employee ####
+######################
+
+### get All Salary Data employee
+GET http://localhost:5000/salary_data
+
+### get All Salary Data employee By Month
+GET http://localhost:5000/salary_data/month/June
+
+### get All Salary Data employee By Year
+GET http://localhost:5000/salary_data/year/2023
+
+// NOTE: Data month & year (month & year) ditetapkan berdasarkan input Attendance Data employee.
